@@ -24,7 +24,7 @@ class PDEDataset(Dataset):
         data = np.load(data_file)
 
         if type(data) is np.ndarray:
-            self.data_x = data
+            self.data_x = data[:,:,:60,:60]
             self.params = None
         elif 'x' in data.files:
             self.data_x = data['x']
@@ -40,7 +40,7 @@ class PDEDataset(Dataset):
 
     def __getitem__(self, idx):
 
-        x = torch.from_numpy(self.data_x[idx])
+        x = torch.from_numpy(self.data_x[idx][:,:,:60,:60])
 
         if self.params is None:
             sample = [x, x, torch.tensor(float('nan'))]

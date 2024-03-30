@@ -15,9 +15,9 @@ import argparse
 
 
 parser = argparse.ArgumentParser(description="Generate convection-diffusion dataset.")
-parser.add_argument('-d', '--datasize', type=int, default=10,
+parser.add_argument('-d', '--datasize', type=int, default=1000,
     help="Size of generated dataset--should be a multiple of batch_size. Default: 1000")
-parser.add_argument('-b', '--batchsize', type=int, default=1,
+parser.add_argument('-b', '--batchsize', type=int, default=50,
     help="Batch size for generating dataset in parallel--should divide data_size. Default: 50")
 parser.add_argument('-f', '--filename', type=str, default='CD_dataset.npz', 
     help="Path with file name ending in .npz where dataset is saved. Default: CD_dataset.npz")

@@ -1,6 +1,6 @@
 {
-    "DATAFILE":             "data/wave_vel/Fish_wave_vel_data.npz",
-    "OUTFOLDER":            "fish_runfno3",
+    "DATAFILE":             "data/wave_vel/Fish_wave_vel_vp_data.npz",
+    "OUTFOLDER":            "fish_run_vp_fno4",
 
     "cuda_device":          0,
 
@@ -8,7 +8,7 @@
 
     "model":                "pde2d",
     "data_dimension":       2,
-    "data_channels":        1,
+    "data_channels":        2,
 
 
     "dataset_type":         "npz_dataset",
@@ -26,15 +26,16 @@
     "prop_layers":          1,
 
     "param_size":           1,
-    "beta":                 0.5,
+    "beta":                 1,
 
     "learning_rate":        1e-3,
     "eps":                  1e-8,
     "num_workers":          2,
     "batch_size":           40,
+    "prior_std": 0.01,
+    "prior_mu": 1,
 
     "max_epochs":           1000,
     "discount_rate":        0.01,                            
     "save_epochs":          800
-    
 }

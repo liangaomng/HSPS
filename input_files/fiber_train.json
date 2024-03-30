@@ -1,14 +1,14 @@
 {
-    "DATAFILE":             "data/fiber_dataset_size200.npz",
-    "OUTFOLDER":            "fiber_run0",
+    "DATAFILE":             "data/wave_vel/Fish_wave_vel_data.npz",
+    "OUTFOLDER":            "fish_run",
 
     "cuda_device":          0,
 
     "train":                true,
 
-    "model":                "pde1d",
-    "data_dimension":       1,
-    "data_channels":        2,
+    "model":                "pde2d",
+    "data_dimension":       2,
+    "data_channels":        1,
 
     "dataset_type":         "npz_dataset",
     "boundary_cond":        "crop",
